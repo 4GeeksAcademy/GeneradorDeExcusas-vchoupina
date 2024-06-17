@@ -6,10 +6,10 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  const who = ["The dog", "My grandma", "The mailman", "My bird"];
-  const action = ["ate", "peed", "crushed", "broke"];
-  const what = ["my homework", "my phone", "the car"];
-  const when = [
+  let who = ["The dog", "My grandma", "The mailman", "My bird"];
+  let action = ["ate", "peed", "crushed", "broke"];
+  let what = ["my homework", "my phone", "the car"];
+  let when = [
     "before the class",
     "when I was sleeping",
     "while I was exercising",
@@ -17,9 +17,9 @@ window.onload = function() {
     "while I was praying"
   ];
 
-  const getRandomElement = arr => arr[Math.floor(Math.random() * arr.length)];
+  let getRandomElement = arr => arr[Math.floor(Math.random() * arr.length)];
 
-  const generateExcuse = () =>
+  let generateExcuse = () =>
     `${getRandomElement(who)} ${getRandomElement(action)} ${getRandomElement(
       what
     )} ${getRandomElement(when)}`;
