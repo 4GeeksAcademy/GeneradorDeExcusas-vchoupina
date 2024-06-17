@@ -1,1 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.excuse-image {
+  width: 300px;
+  height: auto;
+}
