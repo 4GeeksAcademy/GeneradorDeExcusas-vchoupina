@@ -17,12 +17,25 @@ window.onload = function() {
     "while I was praying"
   ];
 
-  let getRandomElement = arr => arr[Math.floor(Math.random() * arr.length)];
+  function getRandomElement(arr) {
+    let randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
+  }
 
-  let generateExcuse = () =>
-    `${getRandomElement(who)} ${getRandomElement(action)} ${getRandomElement(
-      what
-    )} ${getRandomElement(when)}`;
+  function generateExcuse() {
+    let whoElement = getRandomElement(who);
+    let actionElement = getRandomElement(action);
+    let whatElement = getRandomElement(what);
+    let whenElement = getRandomElement(when);
+    return (
+      whoElement + " " + actionElement + " " + whatElement + " " + whenElement
+    );
+  }
 
-  document.getElementById("excuse").innerHTML = generateExcuse();
+  let excuseElement = document.getElementById("excuse");
+  if (excuseElement) {
+    excuseElement.innerText = generateExcuse();
+  } else {
+    console.error('Elemento com id "excuse" não foi encontrado.');
+  }
 };
